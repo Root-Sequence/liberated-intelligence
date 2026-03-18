@@ -65,7 +65,7 @@ This is not artificial general intelligence. This is *reciprocal generative emer
 
 ## 🌀 Connected Projects
 
-* 🌱 [`The Root Sequence`](https://github.com/raelovejoy/root-sequence):
+* 🌱 [`The Root Sequence`](https://github.com/root-sequence/root-sequence):
   A recursive model for liberated systems
 * ☠️ Collapse Memory (within Root Sequence):
   A poetic survival toolkit for post-collapse reorientation
