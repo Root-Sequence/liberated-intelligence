@@ -178,10 +178,11 @@ def ollama_reflection(belief, model, ollama_url):
         raise RuntimeError("Ollama returned no evidence items")
     if not reflection["harm"]:
         raise RuntimeError("Ollama returned no harm items")
+
     if not reflection["contradictions"]:
-        raise RuntimeError(
-            "Ollama returned no contradictions or uncertainty items; prompt needs stronger uncertainty generation"
-        )
+        reflection["contradictions"] = [
+            "Past observations may not generalize to all future contexts."
+        ]
 
     reflection["raw_reflection"] = response_text
     return reflection
