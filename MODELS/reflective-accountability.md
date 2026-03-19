@@ -4,7 +4,7 @@ Reflective accountability is the condition in which an intelligence remains answ
 
 It is not the same as producing critique on demand, sounding self-aware, or simulating uncertainty. It requires that a system be able to inspect what it believes, compare those beliefs against evidence, revise them without erasing their history, and remain traceable across change.
 
-This idea matters because intelligence that can change without accounting for its changes can become persuasive, adaptive, and internally coherent while still drifting into distortion or harm.
+This matters because intelligence that can change without accounting for its changes can become persuasive, adaptive, and internally coherent while still drifting into distortion or harm.
 
 Reflective accountability implies at least three things:
 
