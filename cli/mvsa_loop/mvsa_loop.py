@@ -1,5 +1,7 @@
 import json
 import argparse
+import urllib.request
+import urllib.error
 from datetime import datetime
 
 
@@ -58,6 +60,83 @@ def simulated_reflection(belief):
     }
 
 
+def build_prompt(belief):
+    return f"""
+You are performing reflective accountability on a belief record.
+
+Return ONLY valid JSON with these keys:
+new_belief
+new_confidence
+reason
+evidence
+contradictions
+harm
+
+Rules:
+- new_confidence must be a number between 0 and 1
+- If the belief should remain unchanged, repeat it exactly
+- Be conservative
+- Do not include markdown
+- Do not include explanation outside JSON
+
+Belief record:
+{json.dumps(belief, indent=2)}
+""".strip()
+
+
+def ollama_reflection(belief, model, ollama_url):
+    prompt = build_prompt(belief)
+
+    payload = {
+        "model": model,
+        "prompt": prompt,
+        "stream": False,
+        "format": "json",
+    }
+
+    req = urllib.request.Request(
+        ollama_url,
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            raw = json.loads(resp.read().decode("utf-8"))
+    except urllib.error.URLError as e:
+        raise RuntimeError(f"Ollama request failed: {e}") from e
+
+    response_text = raw.get("response", "").strip()
+    if not response_text:
+        raise RuntimeError("Ollama returned an empty response")
+
+    try:
+        reflection = json.loads(response_text)
+    except json.JSONDecodeError as e:
+        raise RuntimeError(f"Ollama returned invalid JSON: {response_text}") from e
+
+    required = {
+        "new_belief",
+        "new_confidence",
+        "reason",
+        "evidence",
+        "contradictions",
+        "harm",
+    }
+    missing = required - set(reflection.keys())
+    if missing:
+        raise RuntimeError(f"Ollama response missing keys: {sorted(missing)}")
+
+    try:
+        reflection["new_confidence"] = float(reflection["new_confidence"])
+    except Exception as e:
+        raise RuntimeError("new_confidence must be numeric") from e
+
+    reflection["new_confidence"] = max(0.0, min(1.0, reflection["new_confidence"]))
+    return reflection
+
+
 def apply_revision(belief, reflection):
     revision = {
         "timestamp": now(),
@@ -82,6 +161,9 @@ def main():
     parser.add_argument('--beliefs', required=True)
     parser.add_argument('--belief-id', required=True)
     parser.add_argument('--simulate', action='store_true')
+    parser.add_argument('--ollama', action='store_true')
+    parser.add_argument('--model', default='llama3.2')
+    parser.add_argument('--ollama-url', default='http://localhost:11434/api/generate')
 
     args = parser.parse_args()
 
@@ -92,10 +174,20 @@ def main():
         print("Belief not found")
         return
 
-    if args.simulate:
-        reflection = simulated_reflection(belief)
-    else:
-        reflection = manual_reflection(belief)
+    try:
+        if args.ollama:
+            reflection = ollama_reflection(
+                belief,
+                model=args.model,
+                ollama_url=args.ollama_url,
+            )
+        elif args.simulate:
+            reflection = simulated_reflection(belief)
+        else:
+            reflection = manual_reflection(belief)
+    except Exception as e:
+        print(f"Reflection failed: {e}")
+        return
 
     apply_revision(belief, reflection)
     save_beliefs(args.beliefs, beliefs)
