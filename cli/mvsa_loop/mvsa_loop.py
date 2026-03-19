@@ -107,6 +107,11 @@ Rules:
 - Do not invent broader user behavior, product goals, or contextual facts that are not present in the belief record
 - If the belief record is sparse, keep confidence changes small
 - Do not increase confidence by more than 0.05 unless the evidence list contains multiple concrete items from the belief record
+- The reason must be consistent with the evidence, contradictions, and confidence
+- Do not say the evidence does not support the belief if confidence stays the same or increases
+- If evidence is weak or sparse, say that support is limited rather than absent
+- If the belief remains unchanged, explain why it remains unchanged
+- If confidence remains unchanged, explain why the available evidence is insufficient to justify a shift
 - Keep each list item short, specific, and concrete
 - Do not include markdown
 - Do not include explanation outside JSON
@@ -191,6 +196,10 @@ def ollama_reflection(belief, model, ollama_url):
         reflection["contradictions"] = [
             "Past observations may not generalize to all future contexts."
         ]
+
+    reason_lower = reflection["reason"].lower()
+    if reflection["new_confidence"] >= previous_confidence and "do not support" in reason_lower:
+        raise RuntimeError("Reason is inconsistent with unchanged or increased confidence")
 
     reflection["raw_reflection"] = response_text
     return reflection
