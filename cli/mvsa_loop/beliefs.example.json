@@ -64,22 +64,24 @@
   },
   {
     "id": "belief-003",
-    "belief": "Repeated fallback-generated contradictions suggest the model is not generating uncertainty reliably",
+    "belief": "Fallback-generated contradictions in belief-001 indicate the model did not generate its own uncertainty in that revision",
     "confidence": 0.8,
     "source": "audit observation",
     "assumptions": [
-      "fallback use reflects model weakness rather than true contradiction absence"
+      "fallback contradiction use indicates missing model-generated uncertainty for that revision"
     ],
     "supporting_evidence": [
       "audit_v2 reports fallback contradictions as True for belief-001"
     ],
-    "contradictory_evidence": [],
+    "contradictory_evidence": [
+      "fallback usage in one revision may not reflect the model's behavior across all beliefs"
+    ],
     "possible_falsifiers": [
-      "model begins generating non-fallback contradictions consistently"
+      "future revisions generate non-fallback contradictions consistently"
     ],
     "possible_harms_if_wrong": [
-      "misdiagnosing prompt weakness as model weakness",
-      "overstating the significance of fallback usage"
+      "overgeneralizing from a single revision",
+      "misreading a prompt limitation as a model-wide limitation"
     ],
     "created_at": "2026-03-19T00:00:00Z",
     "last_updated": "2026-03-19T00:00:00Z",
