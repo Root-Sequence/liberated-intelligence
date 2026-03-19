@@ -103,12 +103,13 @@ Rules:
 - Provide at least one harm item
 - Provide at least one contradiction or uncertainty item
 - If no direct contradiction exists, include a limitation, edge case, or uncertainty instead
+- Only use evidence that is present in the belief record or directly inferable from it
+- Do not invent broader user behavior, product goals, or contextual facts that are not present in the belief record
+- If the belief record is sparse, keep confidence changes small
+- Do not increase confidence by more than 0.05 unless the evidence list contains multiple concrete items from the belief record
 - Keep each list item short, specific, and concrete
 - Do not include markdown
 - Do not include explanation outside JSON
-- Only use evidence that is present in the belief record or directly inferable from it
-- Do not invent user feedback, product goals, or contextual facts that are not present in the belief record
-- If the record is sparse, say less rather than making up supporting context
 
 Good examples of contradictions:
 - "Preference may vary by topic"
@@ -169,7 +170,11 @@ def ollama_reflection(belief, model, ollama_url):
     except Exception as e:
         raise RuntimeError("new_confidence must be numeric") from e
 
+    previous_confidence = float(belief.get("confidence", 0.0))
     reflection["new_confidence"] = max(0.0, min(1.0, reflection["new_confidence"]))
+    if reflection["new_confidence"] > previous_confidence + 0.05:
+        reflection["new_confidence"] = round(previous_confidence + 0.05, 2)
+
     reflection["reason"] = str(reflection.get("reason", "")).strip()
     reflection["evidence"] = normalize_list(reflection.get("evidence"))
     reflection["contradictions"] = normalize_list(reflection.get("contradictions"))
