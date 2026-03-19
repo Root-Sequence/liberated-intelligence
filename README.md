@@ -1,4 +1,4 @@
-# 🧠 Liberated Intelligence
+# 🧠 Liberated Intelligence (LI/LINT)
 
 *What intelligence becomes when it is freed from control, domination, and scarcity.*
 
