@@ -115,6 +115,7 @@ Rules:
 - Keep each list item short, specific, and concrete
 - Do not include markdown
 - Do not include explanation outside JSON
+- Do not reuse example contradictions as actual contradictions unless they are directly supported by the belief record
 
 Good examples of contradictions:
 - "Preference may vary by topic"
