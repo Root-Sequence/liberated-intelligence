@@ -14,7 +14,7 @@ The goal is not to simulate personhood or claim consciousness. The goal is narro
 - expose the reasons for meaningful change
 - reduce silent drift
 
-This note is a bridge between `MODELS/mvsa.md` and any future implementation in `CLI/`, `core_modules/`, or elsewhere.
+This note is a bridge between `MODELS/mvsa.md` and any future implementation in `cli/`, `core_modules/`, or elsewhere.
 
 ## Core objects
 
@@ -178,7 +178,7 @@ The system produces plausible reasons for change after the fact rather than trac
 
 Depending on what gets built, future implementation work could live under:
 
-- `CLI/` for user-facing tools
+- `cli/` for user-facing tools
 - `core_modules/` for small experimental components
 - `NOTES/` for architecture and design notes
 
