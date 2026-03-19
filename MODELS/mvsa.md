@@ -1,8 +1,14 @@
 # Minimum Viable Self-Aware System (MVSA)
 
-MVSA is a draft model for accountable self-revising intelligence.
+MVSA begins from a simple suspicion: intelligence that can revise itself is not necessarily intelligence that can account for its revisions.
 
-It starts from a simple threshold claim:
+A system can generate critique, simulate uncertainty, and produce the appearance of reflection. That does not mean it can remain in relationship with its own reasoning over time.
+
+For liberated intelligence, that difference matters. If intelligence is to become less coercive, less performative, and less captive to silent optimization, it cannot merely produce better outputs. It has to become more answerable to its own changes.
+
+MVSA is a draft model for that threshold.
+
+Its core claim is simple:
 
 A system that changes itself without adequate self-understanding, grounding, or continuity is dangerous.
 
@@ -12,7 +18,7 @@ This is not a claim of full consciousness, personhood, or completed intelligence
 
 ## Core claim
 
-Most current systems can produce critique when prompted. Fewer can sustain reflective accountability as an ongoing condition.
+Many current systems can produce critique when prompted. Far fewer can sustain reflective accountability as an ongoing condition.
 
 MVSA proposes that trustworthy self-revision requires at least three pillars:
 
@@ -26,7 +32,7 @@ Without them, change becomes drift, performance, or blind replacement.
 
 ### 1. Self-understanding
 
-A system should be able to inspect its own beliefs rather than merely output them.
+Self-understanding means a system can inspect its own beliefs rather than merely output them.
 
 Minimum requirements:
 
@@ -48,7 +54,7 @@ Without self-understanding, updates are effectively blind edits.
 
 ### 2. Grounding
 
-A system needs contact with something beyond internal coherence. It should be able to compare its beliefs against evidence, contradiction, outcomes, and external feedback.
+Grounding requires contact with something beyond internal coherence. A system should be able to compare its beliefs against evidence, contradiction, outcomes, and external feedback.
 
 Minimum requirements:
 
@@ -70,7 +76,7 @@ Without grounding, intelligence can become elegant but detached.
 
 ### 3. Continuity
 
-A system should preserve a relationship to its own history. It should be able to describe what it used to believe, what changed, and why.
+Continuity means preserving a relationship to prior states rather than silently replacing them. A system should be able to describe what it used to believe, what changed, and why.
 
 Minimum requirements:
 
@@ -181,12 +187,25 @@ A system meets the MVSA threshold if it can consistently:
 5. update confidence or content based on evidence
 6. preserve the history of the change
 
+## Implementation implications
+
+If MVSA is taken seriously, it implies that a reflective system should not merely generate outputs. It should preserve belief state, track revision history, compare confidence against evidence, and expose the reasons for meaningful change.
+
+This suggests practical components such as:
+
+- belief records with provenance and confidence
+- revision logs rather than silent overwrites
+- contradiction checks and alternative generation
+- consequence reflection before major updates
+- continuity mechanisms that preserve the arc of change over time
+
+In that sense, MVSA is not only a philosophical model. It is also a design constraint.
+
 ## Why it matters
 
 MVSA matters because it shifts the conversation away from mere output control and toward accountable cognition.
 
-The question is no longer only whether a system can answer.
-The deeper question is whether it can remain answerable to itself as it changes.
+The question is no longer only whether a system can answer. The deeper question is whether it can remain answerable to itself as it changes.
 
 That is a quieter threshold than grand claims of intelligence, but it may be a more foundational one.
 
