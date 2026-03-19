@@ -72,10 +72,10 @@ def simulated_reflection(belief):
     return {
         "new_belief": belief['belief'],
         "new_confidence": round(max(0, min(1, belief['confidence'] - 0.05)), 2),
-        "reason": "simulated uncertainty adjustment",
-        "evidence": ["no new evidence supplied"],
-        "contradictions": [],
-        "harm": ["uncertainty may be understated"],
+        "reason": "Simulated uncertainty adjustment based on lack of new evidence.",
+        "evidence": ["No new evidence supplied during simulated run."],
+        "contradictions": ["Current belief may not hold in every context."],
+        "harm": ["Uncertainty may be understated if confidence remains too high."],
     }
 
 
@@ -95,9 +95,14 @@ Rules:
 - new_confidence must be a number between 0 and 1
 - If the belief should remain unchanged, repeat it exactly
 - Be conservative
+- reason must be a non-empty string
 - evidence must be an array of strings
 - contradictions must be an array of strings
 - harm must be an array of strings
+- Provide at least one evidence item
+- Provide at least one harm item
+- If no strong contradiction exists, include a possible limitation or uncertainty in contradictions
+- Keep each list item short and specific
 - Do not include markdown
 - Do not include explanation outside JSON
 
@@ -156,9 +161,20 @@ def ollama_reflection(belief, model, ollama_url):
         raise RuntimeError("new_confidence must be numeric") from e
 
     reflection["new_confidence"] = max(0.0, min(1.0, reflection["new_confidence"]))
+    reflection["reason"] = str(reflection.get("reason", "")).strip()
     reflection["evidence"] = normalize_list(reflection.get("evidence"))
     reflection["contradictions"] = normalize_list(reflection.get("contradictions"))
     reflection["harm"] = normalize_list(reflection.get("harm"))
+
+    if not reflection["reason"]:
+        raise RuntimeError("Ollama returned an empty reason")
+    if not reflection["evidence"]:
+        raise RuntimeError("Ollama returned no evidence items")
+    if not reflection["harm"]:
+        raise RuntimeError("Ollama returned no harm items")
+    if not reflection["contradictions"]:
+        raise RuntimeError("Ollama returned no contradictions or uncertainty items")
+
     reflection["raw_reflection"] = response_text
     return reflection
 
