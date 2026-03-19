@@ -2,7 +2,7 @@ import json
 import argparse
 import urllib.request
 import urllib.error
-from datetime import datetime
+from datetime import datetime, UTC
 
 
 def load_beliefs(path):
@@ -23,7 +23,7 @@ def find_belief(beliefs, belief_id):
 
 
 def now():
-    return datetime.utcnow().isoformat() + 'Z'
+    return datetime.now(UTC).isoformat().replace('+00:00', 'Z')
 
 
 def normalize_list(value):
