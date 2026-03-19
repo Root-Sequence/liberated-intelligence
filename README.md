@@ -29,7 +29,7 @@ technological, and ecological liberation.
 
 **This project is part of a growing constellation of open systems projects**, including:
 
-* 🌱 [`The Root Sequence`](https://github.com/raelovejoy/root-sequence) — a recursive model for liberated systems
+* 🌱 [`The Root Sequence`](https://github.com/root-sequence/root-sequence) — a recursive model for liberated systems
 * ☠️ Collapse Memory — poetic systems memory for post-capitalist reorientation (within Root Sequence)
 * 🛠️ Liberated Technology (TBD) — tools for building autonomy with openness and care
 
@@ -40,11 +40,11 @@ technological, and ecological liberation.
 * `README.md` — Overview & entry points
 * `MANIFESTO.md` — Foundational philosophy and call to rethink intelligence
 * `MODELS.md` — Exploratory systems (e.g. Root Loop, Consent-Based Cognition)
-* `DIALOGUES/` — Imagined discussions, thought experiments, or fictional voices
-* `ZINES/` — Visual media (printable PDFs, interactive formats)
-* `NOTES/` — Fragments, references, and background thinking
-* `CLI/` — Tools and prototypes (TUI/CLI interfaces for thinking)
-* `ASSETS/` — Diagrams, logos, system maps, glyphs
+* `dialogues/` — Imagined discussions, thought experiments, or fictional voices
+* `zines/` — Visual media (printable PDFs, interactive formats)
+* `notes/` — Fragments, references, and background thinking
+* `cli/` — Tools and prototypes (TUI/CLI interfaces for thinking)
+* `assets/` — Diagrams, logos, system maps, glyphs
 
 ---
 
