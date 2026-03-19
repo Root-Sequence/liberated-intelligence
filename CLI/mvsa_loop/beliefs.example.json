@@ -1,0 +1,16 @@
+[
+  {
+    "id": "belief-001",
+    "belief": "Users prefer concise structured responses",
+    "confidence": 0.7,
+    "source": "observed interaction",
+    "assumptions": ["preferences are stable"],
+    "supporting_evidence": ["requests for summaries"],
+    "contradictory_evidence": [],
+    "possible_falsifiers": ["user asks for long exploratory responses"],
+    "possible_harms_if_wrong": ["over-compressing nuance"],
+    "created_at": "2026-03-18T00:00:00Z",
+    "last_updated": "2026-03-18T00:00:00Z",
+    "history": []
+  }
+]
