@@ -43,7 +43,7 @@
   {
     "id": "belief-002",
     "belief": "Sparse records should lead to conservative confidence updates",
-    "confidence": 0.75,
+    "confidence": 0.8,
     "source": "MVSA design principle",
     "assumptions": [
       "limited evidence should not justify strong confidence shifts"
@@ -59,8 +59,27 @@
       "under-updating beliefs even when evidence improves"
     ],
     "created_at": "2026-03-19T00:00:00Z",
-    "last_updated": "2026-03-19T00:00:00Z",
-    "history": []
+    "last_updated": "2026-03-19T05:34:18.965051Z",
+    "history": [
+      {
+        "timestamp": "2026-03-19T05:34:18.965034Z",
+        "previous_belief": "Sparse records should lead to conservative confidence updates",
+        "new_belief": "Sparse records should lead to conservative confidence updates",
+        "previous_confidence": 0.75,
+        "new_confidence": 0.8,
+        "reason": "New supporting evidence: 'new feature will require more exploratory responses'",
+        "evidence": [
+          "new feature will require more exploratory responses"
+        ],
+        "contradictions": [
+          "Preference may vary by topic"
+        ],
+        "harm": [
+          "under-updating beliefs even when evidence improves"
+        ],
+        "raw_reflection": "{\n  \"new_belief\": \"Sparse records should lead to conservative confidence updates\",\n  \"new_confidence\": 0.8,\n  \"reason\": \"New supporting evidence: 'new feature will require more exploratory responses'\",\n  \"evidence\": [\n    \"new feature will require more exploratory responses\"\n  ],\n  \"contradictions\": [\n    \"Preference may vary by topic\"\n  ],\n  \"harm\": [\n    \"under-updating beliefs even when evidence improves\"\n  ]\n}"
+      }
+    ]
   },
   {
     "id": "belief-003",
