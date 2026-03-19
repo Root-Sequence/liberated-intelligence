@@ -112,10 +112,13 @@ Rules:
 - If evidence is weak or sparse, say that support is limited rather than absent
 - If the belief remains unchanged, explain why it remains unchanged
 - If confidence remains unchanged, explain why the available evidence is insufficient to justify a shift
+- Do not change identifiers, belief references, or concrete targets unless the belief record provides direct support for that change
+- If the belief mentions a specific belief id or revision, preserve that reference unless there is explicit evidence to revise it
+- Do not generalize from one revision to multiple revisions unless the belief record explicitly contains multiple revisions
+- Do not reuse example contradictions as actual contradictions unless they are directly supported by the belief record
 - Keep each list item short, specific, and concrete
 - Do not include markdown
 - Do not include explanation outside JSON
-- Do not reuse example contradictions as actual contradictions unless they are directly supported by the belief record
 
 Good examples of contradictions:
 - "Preference may vary by topic"
@@ -201,6 +204,14 @@ def ollama_reflection(belief, model, ollama_url):
     reason_lower = reflection["reason"].lower()
     if reflection["new_confidence"] >= previous_confidence and "do not support" in reason_lower:
         raise RuntimeError("Reason is inconsistent with unchanged or increased confidence")
+
+    original_belief = belief.get("belief", "").strip()
+    revised_belief = str(reflection.get("new_belief", "")).strip()
+    if belief.get("id") == "belief-003":
+        if "belief-001" in original_belief and "belief-001" not in revised_belief:
+            raise RuntimeError("Reflection changed the belief target unexpectedly")
+        if "only recorded revision" in original_belief.lower() and "multiple revisions" in reason_lower:
+            raise RuntimeError("Reflection generalized from one revision to multiple revisions")
 
     reflection["raw_reflection"] = response_text
     return reflection
