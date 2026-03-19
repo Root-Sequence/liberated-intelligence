@@ -101,10 +101,16 @@ Rules:
 - harm must be an array of strings
 - Provide at least one evidence item
 - Provide at least one harm item
-- If no strong contradiction exists, include a possible limitation or uncertainty in contradictions
-- Keep each list item short and specific
+- Provide at least one contradiction or uncertainty item
+- If no direct contradiction exists, include a limitation, edge case, or uncertainty instead
+- Keep each list item short, specific, and concrete
 - Do not include markdown
 - Do not include explanation outside JSON
+
+Good examples of contradictions:
+- "Preference may vary by topic"
+- "Some users want longer exploratory responses in complex contexts"
+- "Past behavior may not generalize to future requests"
 
 Belief record:
 {json.dumps(belief, indent=2)}
@@ -173,7 +179,9 @@ def ollama_reflection(belief, model, ollama_url):
     if not reflection["harm"]:
         raise RuntimeError("Ollama returned no harm items")
     if not reflection["contradictions"]:
-        raise RuntimeError("Ollama returned no contradictions or uncertainty items")
+        raise RuntimeError(
+            "Ollama returned no contradictions or uncertainty items; prompt needs stronger uncertainty generation"
+        )
 
     reflection["raw_reflection"] = response_text
     return reflection
