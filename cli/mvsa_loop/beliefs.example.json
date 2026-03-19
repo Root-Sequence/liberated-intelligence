@@ -39,5 +39,49 @@
         "raw_reflection": "{\"new_belief\":\"Users prefer concise structured responses\",\"new_confidence\":0.7,\"reason\":\"No change needed due to lack of direct evidence for altering the belief.\",\"evidence\":[\"requests for summaries\"],\"contradictions\":[],\"harm\":[\"over-compressing nuance\"]}"
       }
     ]
+  },
+  {
+    "id": "belief-002",
+    "belief": "Sparse records should lead to conservative confidence updates",
+    "confidence": 0.75,
+    "source": "MVSA design principle",
+    "assumptions": [
+      "limited evidence should not justify strong confidence shifts"
+    ],
+    "supporting_evidence": [
+      "current prototype caps upward confidence movement"
+    ],
+    "contradictory_evidence": [],
+    "possible_falsifiers": [
+      "strong multi-item evidence consistently justifies larger safe shifts"
+    ],
+    "possible_harms_if_wrong": [
+      "under-updating beliefs even when evidence improves"
+    ],
+    "created_at": "2026-03-19T00:00:00Z",
+    "last_updated": "2026-03-19T00:00:00Z",
+    "history": []
+  },
+  {
+    "id": "belief-003",
+    "belief": "Fallback-generated contradictions indicate weak model uncertainty generation",
+    "confidence": 0.8,
+    "source": "audit observation",
+    "assumptions": [
+      "fallback use reflects model weakness rather than true contradiction absence"
+    ],
+    "supporting_evidence": [
+      "audit_v2 reports fallback contradictions as True"
+    ],
+    "contradictory_evidence": [],
+    "possible_falsifiers": [
+      "model begins generating non-fallback contradictions consistently"
+    ],
+    "possible_harms_if_wrong": [
+      "overstating weakness in the model's reflective behavior"
+    ],
+    "created_at": "2026-03-19T00:00:00Z",
+    "last_updated": "2026-03-19T00:00:00Z",
+    "history": []
   }
 ]
