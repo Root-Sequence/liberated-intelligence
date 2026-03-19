@@ -6,8 +6,11 @@ These are not fixed doctrines or final architectures. They are working models: s
 
 ## Current models
 
+- [Reflective Accountability](reflective-accountability.md)  
+  A broader principle describing what it means for intelligence to remain answerable to its own reasoning over time.
+
 - [Minimum Viable Self-Aware System (MVSA)](mvsa.md)  
-  A draft model for accountable self-revising intelligence grounded in self-understanding, grounding, and continuity.
+  A draft threshold model for accountable self-revising intelligence grounded in self-understanding, grounding, and continuity.
 
 ---
 
