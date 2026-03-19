@@ -106,6 +106,9 @@ Rules:
 - Keep each list item short, specific, and concrete
 - Do not include markdown
 - Do not include explanation outside JSON
+- Only use evidence that is present in the belief record or directly inferable from it
+- Do not invent user feedback, product goals, or contextual facts that are not present in the belief record
+- If the record is sparse, say less rather than making up supporting context
 
 Good examples of contradictions:
 - "Preference may vary by topic"
