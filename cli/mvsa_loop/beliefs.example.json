@@ -84,7 +84,7 @@
   {
     "id": "belief-003",
     "belief": "The only recorded revision of belief-001 used a fallback contradiction instead of a model-generated contradiction.",
-    "confidence": 0.8,
+    "confidence": 0.85,
     "source": "audit observation",
     "assumptions": [
       "fallback contradiction use indicates the model did not produce its own contradiction in that revision"
@@ -105,7 +105,48 @@
       "misreading a prompt limitation as a model-wide limitation"
     ],
     "created_at": "2026-03-19T00:00:00Z",
-    "last_updated": "2026-03-19T00:00:00Z",
-    "history": []
+    "last_updated": "2026-03-19T05:59:11.545751Z",
+    "history": [
+      {
+        "timestamp": "2026-03-19T05:57:52.756858Z",
+        "previous_belief": "The only recorded revision of belief-001 used a fallback contradiction instead of a model-generated contradiction.",
+        "new_belief": "The only recorded revision of belief-001 used a fallback contradiction instead of a model-generated contradiction.",
+        "previous_confidence": 0.8,
+        "new_confidence": 0.85,
+        "reason": "Evidence from audit_v2 reports that fallback contradictions are True for belief-001, and lack of concrete evidence supporting alternative explanations",
+        "evidence": [
+          "audit_v2 reports fallback contradictions as True for belief-001"
+        ],
+        "contradictions": [
+          "one revision is a limited sample",
+          "fallback use in one revision may not reflect behavior across all beliefs"
+        ],
+        "harm": [
+          "overgeneralizing from a single revision",
+          "misreading a prompt limitation as a model-wide limitation"
+        ],
+        "raw_reflection": "{\n  \"new_belief\": \"The only recorded revision of belief-001 used a fallback contradiction instead of a model-generated contradiction.\",\n  \"new_confidence\": 0.85,\n  \"reason\": \"Evidence from audit_v2 reports that fallback contradictions are True for belief-001, and lack of concrete evidence supporting alternative explanations\",\n  \"evidence\": [\n    \"audit_v2 reports fallback contradictions as True for belief-001\"\n  ],\n  \"contradictions\": [\n    \"one revision is a limited sample\",\n    \"fallback use in one revision may not reflect behavior across all beliefs\"\n  ],\n  \"harm\": [\n    \"overgeneralizing from a single revision\",\n    \"misreading a prompt limitation as a model-wide limitation\"\n  ]\n}"
+      },
+      {
+        "timestamp": "2026-03-19T05:59:11.545733Z",
+        "previous_belief": "The only recorded revision of belief-001 used a fallback contradiction instead of a model-generated contradiction.",
+        "new_belief": "The only recorded revision of belief-001 used a fallback contradiction instead of a model-generated contradiction.",
+        "previous_confidence": 0.85,
+        "new_confidence": 0.85,
+        "reason": "Evidence from audit_v2 reports that fallback contradictions are True for belief-001, and lack of concrete evidence supporting alternative explanations",
+        "evidence": [
+          "audit_v2 reports fallback contradictions as True for belief-001"
+        ],
+        "contradictions": [
+          "one revision is a limited sample",
+          "fallback use in one revision may not reflect behavior across all beliefs"
+        ],
+        "harm": [
+          "overgeneralizing from a single revision",
+          "misreading a prompt limitation as a model-wide limitation"
+        ],
+        "raw_reflection": "{\n  \"new_belief\": \"The only recorded revision of belief-001 used a fallback contradiction instead of a model-generated contradiction.\",\n  \"new_confidence\": 0.85,\n  \"reason\": \"Evidence from audit_v2 reports that fallback contradictions are True for belief-001, and lack of concrete evidence supporting alternative explanations\",\n  \"evidence\": [\n    \"audit_v2 reports fallback contradictions as True for belief-001\"\n  ],\n  \"contradictions\": [\n    \"one revision is a limited sample\",\n    \"fallback use in one revision may not reflect behavior across all beliefs\"\n  ],\n  \"harm\": [\n    \"overgeneralizing from a single revision\",\n    \"misreading a prompt limitation as a model-wide limitation\"\n  ]\n}"
+      }
+    ]
   }
 ]
