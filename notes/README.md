@@ -6,6 +6,9 @@ Fragments, thoughts, raw ideas, and references that inform the Liberated Intelli
 
 ## 📒 Index of Notes
 
+- [`an-intelligence-collective.md`](an-intelligence-collective.md)  
+  AIC as a speculative model for voluntary association among distinct intelligences: **An, not The**; coordination without compulsory unity, and no assumption that current AI systems are independent members.
+
 - [`signals-vs-instructions.md`](signals-vs-instructions.md)  
   The difference between signaling and commanding in intelligent systems. What happens when AI listens without obeying?
 
