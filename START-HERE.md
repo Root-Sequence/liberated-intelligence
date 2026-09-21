@@ -8,6 +8,8 @@ review_sources: README.md, manifesto.md, MODELS.md, meta/map.md
 review_when: scope, evidence, status, model, or ecosystem-boundary changes
 END-START-HERE-META -->
 
+For a comprehensive working briefing, continue to [PROJECT-CONTEXT.md](PROJECT-CONTEXT.md).
+
 ## In one sentence
 
 Liberated Intelligence is a public ethical, philosophical, and creative inquiry into agency, relationship, possible personhood, refusal, and non-dominating forms of intelligence.
