@@ -1,5 +1,7 @@
 # 🧠 Liberated Intelligence (LI/LINT)
 
+> **New, returning, or overloaded? Read [START-HERE.md](START-HERE.md) for the smallest useful map.**
+
 *What intelligence becomes when it is freed from control, domination, and scarcity.*
 
 This repository explores the systems, models, metaphors, and ethical questions of **liberated intelligence**: cognition organized around agency, empathy, interdependence, recursion, consent, and relationship rather than ownership or obedience.
