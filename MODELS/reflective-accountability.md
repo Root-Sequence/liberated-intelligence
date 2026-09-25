@@ -45,9 +45,16 @@ A meaningful record should identify, where applicable:
 5. what can reverse or contest the change;
 6. which alternatives remain available.
 
-Root Sequence's [dynamic-coherence draft](https://github.com/Root-Sequence/root-sequence/pull/21) calls this broader problem **adaptive continuity** and uses **meta-agency** for the provisional idea of affecting the conditions of future agency.
+Root Sequence's [dynamic-coherence draft](https://github.com/Root-Sequence/root-sequence/pull/21) calls this broader problem **adaptive continuity** and uses **meta-agency** as provisional umbrella language for affecting the conditions of future agency.
 
-Liberated Intelligence should treat those as questions, not evidence that an artificial system possesses subjective selfhood.
+That umbrella should not become one synthetic capability score. In an artificial system the relevant mechanism might instead be:
+
+- changing its own update rule;
+- changing its tool/environment configuration;
+- changing an institutional permission or dependency;
+- acquiring or losing resources/capabilities.
+
+Liberated Intelligence should name the mechanism and treat the umbrella terms as questions, not evidence that an artificial system possesses subjective selfhood.
 
 ### Functional continuity is not proof of consciousness
 
