@@ -95,6 +95,35 @@ Questions a system should be able to answer:
 
 Without continuity, there is no durable learning. There is only replacement.
 
+## State revision versus rule revision
+
+MVSA currently emphasizes changes in represented belief state.
+
+A stronger implementation should distinguish that from changes in **how future revision will occur**.
+
+Examples include:
+
+- changing a confidence-update rule;
+- changing which evidence sources are trusted;
+- adding or removing an action/tool dependency;
+- changing the threshold for asking another participant;
+- changing the system's own memory-retention policy;
+- making a goal or constraint easier or harder to revise.
+
+A rule-level revision can alter many later beliefs and actions even when its immediate output looks harmless.
+
+For such changes, the revision record should include:
+
+- prior rule or constraint;
+- reason/evidence for changing it;
+- expected future scope;
+- alternatives considered;
+- authority for the change;
+- reversal/review path;
+- downstream dependencies created.
+
+This is a proposed extension, not a claim that current AI systems implement a persistent self or that rule revision is conscious self-development.
+
 ## Minimal reflective loop
 
 1. State the current belief.
@@ -111,7 +140,7 @@ Compressed form:
 
 ## Invariant
 
-**No belief changes without explanation, evidence, and traceability.**
+**No consequential belief or revision-rule change without explanation, evidence, scope, and traceability.**
 
 This invariant ties the model together:
 
