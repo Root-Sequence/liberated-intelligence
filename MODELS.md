@@ -7,6 +7,7 @@ These are not fixed doctrines. They are working structures: ways of describing h
 ## Current models
 
 - [Minimum Viable Self-Aware System (MVSA)](MODELS/mvsa.md)
+- [Adaptive continuity, agency, and identity](notes/adaptive-continuity-agency-and-identity.md) — working research note on history-dependent change, meta-agency, continuity, and power over future self-formation; not an adopted model or consciousness claim.
 
 ---
 
