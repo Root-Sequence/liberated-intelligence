@@ -7,6 +7,7 @@ These are not fixed doctrines. They are working structures: ways of describing h
 ## Current models
 
 - [Minimum Viable Self-Aware System (MVSA)](MODELS/mvsa.md)
+- [Reflective Accountability](MODELS/reflective-accountability.md) — accountability across belief and revision-rule change
 
 ---
 
