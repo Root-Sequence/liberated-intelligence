@@ -141,6 +141,24 @@ Connections:
 
 ---
 
+## Permeability, Refusal & Relationship
+
+LI question:
+
+> **How can intelligence participate deeply in a relationship without technical access, inference, memory, or usefulness silently becoming authority?**
+
+The broader Root Sequence [Membrane Test](https://github.com/Root-Sequence/root-sequence/blob/main/concepts/membrane-test.md) asks what crosses a boundary, who controls the crossing, whether it can be refused or reversed, and whether connection preserves meaningful distinction.
+
+The intelligence-specific treatment is in [Permeability, Refusal, and Non-Dominating Intelligence](../notes/permeability-refusal.md).
+
+A compact distinction:
+
+> **Technical permeability is not ethical authorization.**
+
+This connects privacy, inference, memory, assistance, refusal, distributed cognition, and non-domination without treating them as one mechanism.
+
+---
+
 ## Resilience & Refusal
 
 LI question:
