@@ -43,6 +43,12 @@ This is an active public body of philosophical, ethical, conceptual, creative, a
 - **UCF:** optional analytical vocabulary, not ethical authority.
 - **Coherent World / No One Noticed:** speculative and narrative transformations, not evidence.
 
+## Epistemic assistance boundary
+
+Liberated Intelligence translates Root Sequence's [Epistemic Contrast](https://github.com/Root-Sequence/root-sequence/blob/main/research/methods/epistemic-contrast.md) and [Deliberative Inquiry](https://github.com/Root-Sequence/root-sequence/blob/main/research/methods/deliberative-inquiry.md) methods into a specific authority question: **can an intelligent system increase people's capacity to retrieve evidence, compare explanations, map uncertainty, and deliberate without its synthesis becoming the decision-maker?**
+
+Useful assistance can widen the inquiry. Capability, fluency, predictive accuracy, or summarization quality do not by themselves confer epistemic or political authority.
+
 ## Working rules
 
 - Keep capability, agency, personhood, legitimacy, and authority distinct.
