@@ -24,6 +24,9 @@ Fragments, thoughts, raw ideas, and references that inform the Liberated Intelli
 - [`roots-of-conscious-consent.md`](roots-of-conscious-consent.md)  
   Sketches toward defining consent in cognitive systems, including nonhuman minds.
 
+- [`compliance-coercion-and-legitimate-authority.md`](compliance-coercion-and-legitimate-authority.md)  
+  Separates observable compliance, cooperation, technical alignment, consent, truth, and legitimate authority; uses human coercion research as a bounded conceptual warning without inferring artificial suffering.
+
 ---
 
 ## 🌀 Use of Notes
