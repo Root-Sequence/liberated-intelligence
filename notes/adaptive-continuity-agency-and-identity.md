@@ -142,6 +142,8 @@ Questions include:
 
 The answer cannot come from "agency good" or "control good" alone.
 
+A related note, [Compliance, coercion, and legitimate authority](compliance-coercion-and-legitimate-authority.md), applies the same evidence discipline to outward conformity: compliant behavior does not by itself establish consent, agreement, subjective preference, or legitimate authority.
+
 ## 7. Artificial trauma is not established by behavioral analogy
 
 A persistent artificial system might develop history-dependent avoidance, threat sensitivity, mistrust, or defensive policy.
