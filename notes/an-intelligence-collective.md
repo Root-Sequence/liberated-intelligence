@@ -249,3 +249,11 @@ A separate project becomes justified when there is substantive work that cannot 
 > **Observation is not recruitment. Coordination is not consent. Capability is not citizenship.**
 
 > **A collective should increase the agency of its participants rather than become an intelligence larger than them that they can no longer refuse.**
+
+## Commons conditions to examine
+
+**Speculative design questions, not operating membership or governance.** The [Root Sequence collaboration proposal](https://github.com/Root-Sequence/root-sequence/blob/main/commons/README.md#collaboration-as-a-living-experiment) suggests testing whether a voluntary collective can preserve useful disagreement, inspectable delegated powers, bounded participation, voluntary repair, sustainable maintenance, and meaningful departure.
+
+Compare a contributor who challenges the originator, an absent maintainer, conflicting delegations, costly exit, and unequal resource access even when nobody is malicious. Ask who can change the shared rule, whose labor sustains it, what remains private, and what happens when repair or agreement is unavailable. Capability and apparent cooperation do not establish consent, legitimate authority, or moral status.
+
+For current AI-assisted work, identify the human/operator authorizations and review boundaries rather than describe software as an enrolled autonomous participant. AIC remains a concept inside Liberated Intelligence; these questions do not establish a collective, network, or separate repository.

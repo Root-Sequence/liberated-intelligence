@@ -132,3 +132,7 @@ These should not be collapsed into one evidentiary category. A compelling metaph
 You are free to copy, modify, distribute, and use this work, even commercially (eww), without asking permission.
 
 Material incorporated from elsewhere, personal contributions, or future work carrying separate permissions should be labeled rather than assumed to inherit CC0 automatically.
+
+## Collaboration questions
+
+[An Intelligence Collective](notes/an-intelligence-collective.md#commons-conditions-to-examine) now applies commons questions to voluntary plural intelligence: dissent, limited powers, maintenance, privacy, and meaningful exit. This remains speculative relational work. Present AI behavior does not establish independent membership, consciousness, consent, or authority.
